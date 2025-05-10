@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <style>
+      form {
+        text-align: center;
+        padding-top: 2%;
+      }
+
+      .sl {
+        background-color: greenyellow;
+      }
+
+      .sw,
+      .pl,
+      .pw {
+        margin-top: 1%;
+        background-color: greenyellow;
+      }
+
+      .return {
+        margin-top: 1%;
+        background-color: bisque;
+      }
+
+      h1 {
+        text-align: center;
+        color: cyan;
+      }
+    </style>
+    <title>Iris Prediction</title>
+  </head>
+  <body>
+    <h1>Iris prediction model</h1>
+    <form action="/predict" method="post">
+      <input class="sl" name="sepal-length" placeholder="Sepal Length" /><br />
+      <input class="sw" name="sepal-width" placeholder="Sepal Width" /><br />
+      <input class="pl" name="petal-length" placeholder="Petal Length" /><br />
+      <input class="pw" name="petal-width" placeholder="Petal Width" /><br />
+      <button class="return" type="submit">Predict</button>
+    </form>
+  </body>
+</html>
