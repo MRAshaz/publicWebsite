@@ -9,6 +9,7 @@ with open("model.pickle", "rb") as f:
 
 port = int(os.environ.get("PORT", 5000))
 
+
 @app.route("/")
 def home():
     return render_template("home.html")  # HTML form for input
@@ -24,7 +25,7 @@ def predict():
         float(data["petal-width"]),
     ]
     prediction = model.predict([input_data])
-    return jsonify({"prediction": prediction[0]})
+    return render_template("result.html", prediction=prediction)
 
 
 if __name__ == "__main__":
